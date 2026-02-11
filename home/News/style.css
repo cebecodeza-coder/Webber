@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #111;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top bar */
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* Navigation */
+
+.nav {
+
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav ul {
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 12px 0;
+    gap: 30px;
+
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 12px;
+}
+
+.nav a:hover,
+.nav a:focus {
+    border-radius: 4px;
+    text-decoration: underline;
+    color: rgb(182, 1, 182);
+}
+
+/******************************/
+/* AFTER THE FEAUTURE SECTION */
+/******************************/
+
+/* News section */
+
+.section-title{
+    font-size: 2rem;
+    color: rgb(182, 1, 182);
+    margin: 30px 0 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 2.5fr 1.2fr;
+    gap: 30px;
+}
+
+/* Featured story */
+
+.featured img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: rgb(182, 1, 182);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.featured h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.summary {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.byline {
+    font-size: 0.85rem;
+    color: black;
+}
+
+.time {
+    font-size: 0.75rem;
+    color: rgb(103, 103, 103);
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.story {
+    display: flex;
+    gap: 12px;
+}
+
+.story img {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.story h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .news-grid {
+        grid-template-columns: 1.7fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story {
+        flex-direction: row;
+    }
+
+    .featured h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* horizonatal ruler */
+hr {
+  margin-top: 2rem;          
+  margin-bottom: 2rem;       
+  border-top: 1px solid #ccc;
+  height: 1px;
+}
+
+/* Section of the top 3 stories */
+.p-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+
+}
+
+.p-card {
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    background: 5a5a5a;
+    color: #fff;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.card-body {
+    padding: 18px;
+    flex-grow: 1;
+}
+
+.card-body p {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.card-footer {
+    padding: 15px 18px;
+    display: flew;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.read-time{
+    color: #555;
+}
+
+/* footer */
+
+.site-footer {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+  margin-top: 60px;          
+}

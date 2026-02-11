@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #111;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top bar */
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* Navigation */
+
+.nav {
+
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav ul {
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 12px 0;
+    gap: 30px;
+
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 12px;
+}
+
+.nav a:hover,
+.nav a:focus {
+    border-radius: 4px;
+    text-decoration: underline;
+    color: rgb(182, 1, 182);
+}
+
+
+/* footer */
+
+.site-footer {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+  margin-top: 60px;          
+}
+
+/* horizonatal ruler */
+hr {
+  margin-top: 2rem;          
+  margin-bottom: 2rem;       
+  border-top: 1px solid #ccc;
+  height: 1px;
+}
+
+.pricing-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 80px auto 50px;
+}
+
+.pricing-header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: rgb(182, 1, 182); 
+}
+
+.pricing-header p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .pricing-header {
+        margin: 50px auto 30px;
+    }
+
+    .pricing-header h1 {
+        font-size: 36px;
+    }
+
+    .pricing-header p {
+        font-size: 16px;
+    }
+}
+
+/* tutor image section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  background: url("home\ picture\ tutoring\ math.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* dark overlay */
+.card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* text on top */
+.card-title {
+  position: relative; /* keeps text above overlay */
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .card-title {
+    font-size: 1.5rem;
+  }
+}
+
+/**/
+
+.card-body p {
+  line-height: 1.5;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons {
+  display: inline-flex;
+}
+
+.buttons button {
+  background: white;
+  border: 1px solid #999;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.buttons button:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.buttons button:last-child {
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 🔁 RESPONSIVE */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+}
+
+/* button */
+.btn {
+    display: inline-block;
+    background-color: #6c757d;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Image */
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
