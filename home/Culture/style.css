@@ -268,3 +268,9 @@ time {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
+
+@media (max-width: 600px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+}
