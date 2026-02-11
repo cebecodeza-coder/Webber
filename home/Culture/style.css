@@ -144,8 +144,8 @@ hr {
 
 .people-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
 .person img {
@@ -183,7 +183,7 @@ hr {
     margin-bottom: 30px;
   }
 }
-
+ 
 .stories {
   padding: 60px 0;
 }
@@ -238,8 +238,12 @@ time {
   color: #666;
 }
 
-/* Mobile */
+/* Phone */
 @media (max-width: 600px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
   .headline {
     font-size: 1.1rem;
   }
@@ -247,4 +251,20 @@ time {
   .stories {
     padding: 40px 0;
   }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .stories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
 }
