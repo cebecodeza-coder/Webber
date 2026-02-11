@@ -75,8 +75,8 @@ body {
 
 /* featured section */
 .main-posty {
-    margin: 32px 40px;
-    padding: 48px;
+    margin: 32px auto;
+    padding: 40px 5%;
     background: #f1f3f4;
     border-radius: 4px;
     max-width: 1100px;
